@@ -1,0 +1,27 @@
+Define your goal
+	Convert kilometer time in minutes to mile time in minute.
+
+Define requirements
+	The user should be able to enter their minKph and the console returns their km split as a mile split.
+	This assumes the users speed would not decrease since one mile is longer than one kilometer...
+
+Define your tools, target, and backup plan
+	The code will be used on Windows. I will write it alone. I will backup to GitHub.
+
+Breakdown hard problems into easy problems
+	One (1) kilometer equals 0.621371192 miles... 
+	So, a 5m30s kilometer time would be converted to seconds or 330
+	(330sec / 0.621371192) / 60 = 8.85139203min
+	0.85139203 * 60 = 51.08 seconds
+	8m51s per mile speed is equal to 5m30s per kilometer speed
+
+Figure out the sequence of events
+	Take the user's time minutes then seconds. Save them to variables "m" and "s". Multiply "m" by 60 then 
+	add "m" and "s". Save to variable "k". 
+	Divide "k" by 0.621371192. Save to variable "kk". Divide "kk" by 60.
+
+	Hard part - take decimal from "kk" and multiply by 60. Save to variable "ns". 
+	Take whole number from "kk" and append "ns" to the end. 
+
+	Return that to the user (aka the console) in the format:
+	 "If your speed remained the same, your 1km split of 5m30s, would be a 1 mile split of <num>m<num>s" 
