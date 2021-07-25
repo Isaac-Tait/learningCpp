@@ -3,9 +3,13 @@
 
 int main()
 {
+	float seconds{}, decimalTime{};
 	int m{ userKmTime() };
 	int s{ userKmTime() };
 
-	userKmSeconds((m * 60) + s);
-	return 0;
+	seconds = (m * 60) + s;
+
+	decimalTime = seconds / 0.621371192 * 60;
+
+	return decimalTime;
 }
