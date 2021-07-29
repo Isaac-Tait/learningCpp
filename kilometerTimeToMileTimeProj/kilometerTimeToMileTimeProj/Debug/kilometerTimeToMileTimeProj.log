@@ -1,5 +1,7 @@
 ﻿  main.cpp
 C:\Users\isaac\source\repos\kilometerTimeToMileTimeProj\kilometerTimeToMileTimeProj\main.cpp(11,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\isaac\source\repos\kilometerTimeToMileTimeProj\kilometerTimeToMileTimeProj\main.cpp(13,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\isaac\source\repos\kilometerTimeToMileTimeProj\kilometerTimeToMileTimeProj\main.cpp(17,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\isaac\source\repos\kilometerTimeToMileTimeProj\kilometerTimeToMileTimeProj\main.cpp(19,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  math.cpp
+  Generating Code...
   kilometerTimeToMileTimeProj.vcxproj -> C:\Users\isaac\source\repos\kilometerTimeToMileTimeProj\Debug\kilometerTimeToMileTimeProj.exe
