@@ -1,5 +1,6 @@
 #pragma once
-// #define ENABLE_DEBUG
+//#define ENABLE_DEBUG
+
 #ifndef MATH_H
 #define MATH_H
 
