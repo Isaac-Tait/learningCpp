@@ -1,23 +1,25 @@
 #include <iostream>
+#include <stdlib.h>
+#include <string>
 
 //My solution
 
 int main() {
-	std::int8_t x{};
+	std::string x;
 
-	std::cout << "Enter an integer: " << x << '\n';
-		std::cin >> x;
+	std::cout << "Enter an integer: \n";
+	std::cin >> x;
+	int intValue = atoi(x.c_str());
 
-	if ((x % 2) == 0 && (x >= '-128' && x <= '127')) {
-		std::cout << x << " is even\n";
+	if (intValue == 0) {
+		std::cout << "You did not enter a number...\n";
 	}
-	else if ((x % 2) != 0 && (x >= '-128' && x <= '127')) {
+	else if ((intValue % 2) != 0) {
 		std::cout << x << " is odd\n";
 	}
-	else
-		std::cout << "You did not enter an integer between -128 and 127\n";
-
-	return 0;
+	else if ((intValue % 2) == 0) {
+		std::cout << x << " is even\n";
+	}
 }
 
 //Another work in progress
