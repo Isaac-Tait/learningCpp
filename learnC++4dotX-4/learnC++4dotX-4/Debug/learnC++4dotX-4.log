@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\isaac\source\repos\learnC++4dotX-4\learnC++4dotX-4\main.cpp(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\isaac\source\repos\learnC++4dotX-4\learnC++4dotX-4\main.cpp(12,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  learnC++4dotX-4.vcxproj -> C:\Users\isaac\source\repos\learnC++4dotX-4\Debug\learnC++4dotX-4.exe
