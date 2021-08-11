@@ -1,5 +1,5 @@
 Define your goal
-	Convert kilometer time in minutes to mile time in minute.
+	Convert kilometer time in minutes to mile time in minutes.
 
 Define requirements
 	The user should be able to enter their minKph and the console returns their km split as a mile split.
