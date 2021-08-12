@@ -3,9 +3,9 @@
 #include <chrono>
 #include <thread>
 
-int main() {
+#include "constants.h"
 
-	std::string planetOne = "Planet Vanessa", planetTwo = "Planet Lyra", planetThree = "Planet Xing";
+int main() {
 	//Decision point one - which planet to land on.
 	int x = {};
 	//Story fork point one - which planet was selected?
@@ -23,15 +23,15 @@ int main() {
 	std::cin >> x;
 
 	if (x == 1) {
-		std::cout << "Good choice " << planetOne << " looks hospitable. Let us go down and see if it is in fact hospitable.\n";
+		std::cout << "Good choice " << constants::planetOne << " looks hospitable. Let us go down and see if it is in fact hospitable.\n";
 		y = 1;
 	}
 	else if (x == 2) {
-		std::cout << "Really?! You chose " << planetTwo << ". Let us hope that the flaming gas explosions shooting into the upper atmosphere will not destroy our ship....\n";
+		std::cout << "Really?! You chose " << constants::planetTwo << ". Let us hope that the flaming gas explosions shooting into the upper atmosphere will not destroy our ship....\n";
 		y = 2;
 	}
 	else if (x == 3) {
-		std::cout << planetThree << " looks fairly promising. Honestly if it were up to me, your fligh computer, I would have chosen " << planetOne << " but since you are the pilot... Off we go in...\n";
+		std::cout << constants::planetThree << " looks fairly promising. Honestly if it were up to me, your fligh computer, I would have chosen " << constants::planetOne << " but since you are the pilot... Off we go in...\n";
 		y = 3;
 	}
 	else {
@@ -52,7 +52,7 @@ int main() {
 	std::cout << "Ahh screw it " << "0!!\n";
 
 	if (y == 1) {
-		std::cout << "The atmosphere of " << planetOne << " is much thinner than I anticpated. Entry was smooth, however we overshot my intended landing zone. I see two possibilities." << '\n';
+		std::cout << "The atmosphere of " << constants::planetOne << " is much thinner than I anticpated. Entry was smooth, however we overshot my intended landing zone. I see two possibilities." << '\n';
 		std::cout << "One we land on a watery substance that looks like the ocean with a thin fog veneer...\n";
 		std::cout << "Or we land in a primevial looking forest with lots of tall rock formations dripping with waterfalls...\n";
 		std::cout << "What is your choice? 1 = Ocean   2 = Forest\n";
@@ -71,7 +71,7 @@ int main() {
 		}
 	}
 	else if (y == 2) {
-		std::cout << "Warning warning warning! The atmospher of " << planetTwo << " was too dense and I could not detect the asteroid belt. We have sustained severe damage." << '\n';
+		std::cout << "Warning warning warning! The atmospher of " << constants::planetTwo << " was too dense and I could not detect the asteroid belt. We have sustained severe damage." << '\n';
 		std::cout << "I do not know if we can land... What do you want to do?" << "\n";
 		std::cout << "Bail out of the shuttle with your escape pod or ride the flaming wreckage to the planets surface?\n";
 		std::cout << "What is your choice? 1 = Bail    2 = Stay in the shuttle\n";
@@ -91,7 +91,7 @@ int main() {
 		}
 	}
 	else if (y == 3) {
-		std::cout << "Ummm I do not know how to tell you this but it would appear that " << planetThree << " is inhabited by some sort of alien race. We are being approached by an unknown space craft." << '\n';
+		std::cout << "Ummm I do not know how to tell you this but it would appear that " << constants::planetThree << " is inhabited by some sort of alien race. We are being approached by an unknown space craft." << '\n';
 		std::cout << "Our weapon systems are fully functional and armed or we could just hope for the best...\n";
 		std::cout << "What is your choice? 1 = Shoot down the space craft    2 = Hold on and hope for the best...\n";
 
