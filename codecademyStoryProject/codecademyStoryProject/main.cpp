@@ -16,14 +16,23 @@ int main() {
 	int y = {};
 	//Decision point two - each planet has two options upon selection int a records the users decision
 	int a = {};
-
+	//Final decision points of the game, only one results in victory. Which one will you choose?
 	int z = {};
 
 	std::cout << "Excuse me Captain " << name << " this is the flight computer of the USS Starship Polka Dot. I am prematurely awakening you from cryosleep.\n\nYour destination was Alpha Centauri. However, there was an issue with our telemetry.\n\nI had no choice but to drop off of the light sail or risk the ship imploding.\n\n";
+	//Pause for a second so that the user can read the introduction
+	std::this_thread::sleep_for(std::chrono::milliseconds(1500));
 	std::cout << "After dumping the light sail I detected three nearby planets. As of right now the only thing that I know is their names.\n\n";
-
-	std::cout << "They are planets Vanessa, Lyra, and Xing. Which one will you choose to land on? Regrettably, we do not have much fuel left so we cannot stay in space.\n";
-	std::cout << "Planet Vanessa = 1   Planet Lyra = 2    Planet Xing = 3\n";
+	//Pause for a second so that the user can read the introduction
+	std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+	std::cout << "They are planets Vanessa, Lyra, and Xing. Which one will you choose to land on? Regrettably, we do not have much fuel left so we cannot stay in space.\n\n";
+	//Pause for a second so that the user can read the introduction
+	std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+	std::cout << "By the way I should mention that I have calculated our odds of survival to be one in ten. 10% odds seem pretty bad to me, you better make good decisions\n - we may only get one chance at this.\n\n";
+	//Pause for a second so that the user can read the introduction
+	std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+	//User makes his/her choice
+	std::cout << constants::planetOne << " = 1 " << constants::planetTwo << " = 2 " << constants::planetThree << " = 3" << '\n';
 	std::cin >> x;
 
 	if (x == 1) {
@@ -43,8 +52,10 @@ int main() {
 		return 0;
 	}
 
+	//Console sleeps for 3 seconds to allow the reader to decide with little pressure and to read the text.
 	std::this_thread::sleep_for(std::chrono::milliseconds(3000));
 
+	//Console sleeps for 1 second intervals so that the countdown progresses the story
 	std::cout << "Counting down to atmosphere entry in " << "10\n";
 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 	std::cout << "Counting down to atmosphere entry in " << "9\n";
@@ -119,5 +130,37 @@ int main() {
 	else {
 		std::cout << "You should never read this unless there is a problem with the code...\n";
 	}
-	std::this_thread::sleep_for(std::chrono::milliseconds(3000));
+
+	//Console sleeps for 2 seconds for dramatic effect
+	std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+	
+	//Got to lesson 7.4 in learncpp.com so I decided to switch (haha) to switch statements :)
+	switch (z) {
+	//Logic for planet Vanessa
+	case 1:
+		std::cout << "Not written yet" << '\n';
+		return 0;
+	case 2:
+		std::cout << "Not written yet" << '\n';
+		return 0;
+	//Logic for planet Lyra
+	case 3:
+		std::cout << "Not written yet" << '\n';
+		return 0;
+	case 4:
+		std::cout << "Not written yet" << '\n';
+		return 0;
+	//Logic for Planet Xing
+	case 5:
+		std::cout << "Well we sure taught them a lesson. It would appear that their queen was on that ship that we just blew up.\n\nCongratulations Captain " << name << " I have just been contacted by an alien delegation and they are requesting your presence on their planet so that you can crown you Supreme Commander and President of the Galactic Federation of Axie." << '\n';
+		return 0;
+	case 6:
+		std::cout << "Well Captain " << name << " it would appear that this is the end. I will continue to exist alone while the alien horde studies our space craft. You on the other hand will spend the next 1,000 years floating in the goo they put you in after gassing you with poison.\n\n I guess in some ways it is kind of ironic, we are both being studied. Unless of course they find my power sour...." << '\n';
+		return 0;
+	//Default
+	default:	
+		std::cout << "Somehow you got here, I do not know how. Consequently I do not know how to get you back so you will stay here forever and rot... Gee that sucks!" << '\n';
+		return 0;
+	}
+	return 0;
 }
