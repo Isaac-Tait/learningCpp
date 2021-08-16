@@ -31,10 +31,16 @@ int main() {
 	std::cout << "By the way I should mention that I have calculated our odds of survival to be one in ten. 10% odds seem pretty bad to me, you better make good decisions\n - we may only get one chance at this.\n\n";
 	//Pause for a second so that the user can read the introduction
 	std::this_thread::sleep_for(std::chrono::milliseconds(1500));
-	//User makes his/her choice
+	//User makes his/her choice (and try again if incorrect value)
+tryAgain:
 	std::cout << constants::planetOne << " = 1 " << constants::planetTwo << " = 2 " << constants::planetThree << " = 3" << '\n';
 	std::cin >> x;
 
+	//goto statement if user enters value greater than 3
+	if (x > 3) {
+		goto tryAgain;
+	}
+	
 	if (x == 1) {
 		std::cout << "Good choice " << constants::planetOne << " looks hospitable. Let us go down and see if it is in fact hospitable.\n";
 		y = 1;
