@@ -11,6 +11,18 @@
 * hello
 ********************/
 
+bool isPrime(constants::randomOne[i])
+{
+	if (n <= 1)
+		std::cout << constants::randomOne[i] << " is not prime, rather it is a composite number\n";
+
+	for (int i{ 0 }; i <= 7; ++i)
+		if (n % 1 == 0)
+			std::cout << constants::randomOne[i] << " is not prime, rather it is a composite number\n";
+
+	std::cout << constants::randomOne[i] << " is prime\n";
+}
+
 int main() {
 	float x{};
 
@@ -22,17 +34,6 @@ int main() {
 	}
 	else
 		std::cout << "I know math\n";
-
-	for (int i{ 0 }; i <= 7; ++i)
-
-		if (constants::randomOne[i] % 2 == 0)
-			std::cout << constants::randomOne[i] << " is not prime\n";
-
-		else if (constants::randomOne[i] == 1 || constants::randomOne[i] == 0)
-			std::cout << constants::randomOne[i] << " is not prime\n";
-
-		else
-			std::cout << constants::randomOne[i] << " is prime\n";
 
 	std::cout << "How strong is gravity in meters per second on Mars?\n";
 	std::cin >> x;
