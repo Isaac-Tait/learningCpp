@@ -1,4 +1,7 @@
 ﻿  Source.cpp
 C:\Users\isaac\source\repos\practiceLoops\practiceLoops\constants.h(8,33): warning C4305: 'initializing': truncation from 'double' to 'const float'
-C:\Users\isaac\source\repos\practiceLoops\practiceLoops\Source.cpp(40,35): warning C4145: '==': relational expression as switch expression; possible confusion with '='
+C:\Users\isaac\source\repos\practiceLoops\practiceLoops\constants.h(10,68): warning C4305: 'initializing': truncation from 'int' to 'const char'
+C:\Users\isaac\source\repos\practiceLoops\practiceLoops\constants.h(10,60): warning C4309: 'initializing': truncation of constant value
+C:\Users\isaac\source\repos\practiceLoops\practiceLoops\constants.h(10,64): warning C4309: 'initializing': truncation of constant value
+C:\Users\isaac\source\repos\practiceLoops\practiceLoops\Source.cpp(59,35): warning C4145: '==': relational expression as switch expression; possible confusion with '='
   practiceLoops.vcxproj -> C:\Users\isaac\source\repos\practiceLoops\Debug\practiceLoops.exe
