@@ -34,8 +34,20 @@
 *****************************************/
 #include <iostream>
 #include <time.h>
+#include <cstdlib>
+
 #include "constants.h"
 
+void opponent() {
+	srand(time(NULL));
+	int randomIndex = rand() % 5;
+
+	std::string value = constants::computer[randomIndex];
+		void* voidPtr{ &value };
+		char* intPtr{ static_cast<char*>(voidPtr) };
+
+		std::cout << *intPtr;
+}
 
 int main() {
 	std::string x{};
@@ -48,9 +60,14 @@ int main() {
 	srand(time(NULL));
 	int randomIndex = rand() % 5;
 
-	std::cout << "Your opponent is the computer " << constants::computer[randomIndex] << " she is hard to beat.\n";
+	std::string value = constants::computer[randomIndex];
+
+	std::cout << "Your opponent is the computer " << value << " she is hard to beat.\n";
 	std::cout << "Good luck " << x << "!" << '\n';
 
+	std::cout << opponent << '\n';
+	std::cout << opponent << '\n';
+	std::cout << opponent << '\n';
 
 	return 0;
 }
