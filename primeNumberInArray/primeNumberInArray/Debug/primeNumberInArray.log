@@ -1,3 +1,2 @@
 ﻿  main.cpp
-C:\Users\isaac\source\repos\primeNumberInArray\primeNumberInArray\main.cpp(19,11): warning C4305: 'return': truncation from 'int' to 'bool'
   primeNumberInArray.vcxproj -> C:\Users\isaac\source\repos\primeNumberInArray\Debug\primeNumberInArray.exe
