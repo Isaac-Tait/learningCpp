@@ -1,29 +1,23 @@
 #include <iostream>
 #include "constants.h"
 
-bool isPrime(int x) 
+int isPrime(int x) 
 {
-	if (x < 2)
+	int count = 0;
+
+	for (int j = 1; j <= x; ++j) 
 	{
-		std::cout << x << " is not prime.\n";
+		if (x % j == 0) 
+		{
+			count++;
+		}
 	}
-	else if (x == 3 || x == 2) 
+	if (count == 2)
 	{
 		std::cout << x << " is prime.\n";
 	}
-	else if (x % 2 == 0) 
-	{
-		std::cout << x << " is not prime.\n";
-	}
-
-	for (int j = 2; j <= sqrt(x); ++j) 
-	{
-		if (x % j == 0) {
-			std::cout << x << " is not prime\n";
-			break;
-		}
-		std::cout << x << " is prime\n";
-	}
+	else
+		std::cout << x << " is NOT prime.\n";
 
 	return 0;
 }
