@@ -21,6 +21,7 @@
 	1st - identify random number selector
 	1a - Computer is randomly selected but the same name needs to be used throughout the game...
 	2nd - Define board with five slots and remember which ones have been filled
+	2a - Remember which acorn has been one and if the selection lands on it again tell user they already have this acorn.
 	3rd - If computer gets to choose two (or one color) it must choose only available colors at random...
 	4th - Could be cool if there was a board displaying R, B, G, Y, P with an X above denoting gotten already...
 
@@ -83,11 +84,18 @@ int main() {
 	std::cin >> x;
 
 	std::cout << "Hello " << x << " and welcome to the game " << constants::gameName << " where you try to beat the computer in a random game of chance.\n\nYou are in a race against time to fill your nest with the five colors of acorns before winter comes!\n";
+	
 	std::this_thread::sleep_for(std::chrono::milliseconds(4500));//Pause console for 4.5 seconds
-	std::cout << "Your opponent is the computer " << opponent() << " she is hard to beat.\n";
+	
+	std::string opponent_name = opponent();
+	std::cout << "Your opponent is the computer " << opponent_name << " she is hard to beat.\n";
 	std::cout << "Good luck " << x << "!" << '\n';
+	
 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));//Pause console for 1 second
+	
 	std::cout << chosenPlayer() << " has been randomly selected to begin the game.\n";
+	
+	/*Round 1*/
 
 	if (chosenPlayer() == x) 
 	{
@@ -97,8 +105,10 @@ int main() {
 	}
 	else 
 	{
-		std::cout << "It looks like " << opponent() << " found a " << acornWon() << " Acorn. It is time for you " << x << " to go look for an acorn.\n";
+		std::cout << "It looks like " << opponent_name << " found a " << acornWon() << " Acorn. It is time for you " << x << " to go look for an acorn.\n";
+		
 		std::this_thread::sleep_for(std::chrono::milliseconds(1500));//Pause console for 1.5 seconds
+		
 		std::cout << "Please enter a random number and press enter to see what acorn you will find.\n";
 		std::cin >> y;
 		std::cout << "Congratulations you found a " << acornWon() << " Acorn for your nest. That is one less acorn to find before winter sets in.\n";
