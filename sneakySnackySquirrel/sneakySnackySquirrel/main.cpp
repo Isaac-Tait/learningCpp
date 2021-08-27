@@ -35,39 +35,74 @@
 #include <iostream>
 #include <time.h>
 #include <cstdlib>
+#include <chrono>
+#include <thread>
 
 #include "constants.h"
 
-void opponent() {
+/*Global Variables*/
+std::string x{}; //User's name
+
+/*Function that chooses computers name from the computer array defined in constants.h*/
+std::string opponent() {
 	srand(time(NULL));
 	int randomIndex = rand() % 5;
 
 	std::string value = constants::computer[randomIndex];
-		void* voidPtr{ &value };
-		char* intPtr{ static_cast<char*>(voidPtr) };
 
-		std::cout << *intPtr;
+	return value;
+}
+
+/*Function that chooses who begins the game - the user or the computer*/
+std::string chosenPlayer() {
+	srand(time(NULL));
+	int randomIndex = rand() % 2;
+	if (randomIndex == 1) {
+		return x;
+	}
+	else {
+		return opponent();
+	}
+
+	return chosenPlayer();
+}
+
+std::string acornWon() {
+	srand(time(NULL));
+	int randomIndex = rand() % 5;
+
+	std::string acorn = constants::coloredAcorns[randomIndex];
+
+	return acorn;
 }
 
 int main() {
-	std::string x{};
+ 	int y{}; //variable y declared but not defined - it will hold the user's random number choice to initiate their roll.
 
 	std::cout << "What is your name?\n";
 	std::cin >> x;
 
 	std::cout << "Hello " << x << " and welcome to the game " << constants::gameName << " where you try to beat the computer in a random game of chance.\n\nYou are in a race against time to fill your nest with the five colors of acorns before winter comes!\n";
-	
-	srand(time(NULL));
-	int randomIndex = rand() % 5;
-
-	std::string value = constants::computer[randomIndex];
-
-	std::cout << "Your opponent is the computer " << value << " she is hard to beat.\n";
+	std::this_thread::sleep_for(std::chrono::milliseconds(4500));//Pause console for 4.5 seconds
+	std::cout << "Your opponent is the computer " << opponent() << " she is hard to beat.\n";
 	std::cout << "Good luck " << x << "!" << '\n';
+	std::this_thread::sleep_for(std::chrono::milliseconds(1000));//Pause console for 1 second
+	std::cout << chosenPlayer() << " has been randomly selected to begin the game.\n";
 
-	std::cout << opponent << '\n';
-	std::cout << opponent << '\n';
-	std::cout << opponent << '\n';
+	if (chosenPlayer() == x) 
+	{
+		std::cout << "Please enter a random number and press enter to see what acorn you will find.\n";
+		std::cin >> y;
+		std::cout << "Congratulations you found a " << acornWon() << " Acorn for your nest. That is one less acorn to find before winter sets in.\n";
+	}
+	else 
+	{
+		std::cout << "It looks like " << opponent() << " found a " << acornWon() << " Acorn. It is time for you " << x << " to go look for an acorn.\n";
+		std::this_thread::sleep_for(std::chrono::milliseconds(1500));//Pause console for 1.5 seconds
+		std::cout << "Please enter a random number and press enter to see what acorn you will find.\n";
+		std::cin >> y;
+		std::cout << "Congratulations you found a " << acornWon() << " Acorn for your nest. That is one less acorn to find before winter sets in.\n";
+	}
 
 	return 0;
 }
