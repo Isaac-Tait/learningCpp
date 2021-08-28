@@ -21,14 +21,13 @@
 	1st - identify random number selector
 	1a - Computer is randomly selected but the same name needs to be used throughout the game...
 	2nd - Define board with five slots and remember which ones have been filled
-	2a - Remember which acorn has been one and if the selection lands on it again tell user they already have this acorn.
-	3rd - If computer gets to choose two (or one color) it must choose only available colors at random...
+	3rd - Remember which acorn has been one and if the selection lands on it again tell user they already have this acorn.
 	4th - Could be cool if there was a board displaying R, B, G, Y, P with an X above denoting gotten already...
 
 ** Figure out sequence of events
 	1 - Enter players name
 	2 - Random selection who goes first - player or computer
-	3 - Spin chooses color or gives user option to select one or two (depending on "roll")
+	3 - Spin chooses color
 	4 - Turn moves onto other player who completes step 3.
 	5 - Step 4 continues until someone wins
 
@@ -41,7 +40,7 @@
 
 #include "constants.h"
 
-/*Global Variables*/
+/*Global Variable*/
 std::string x{}; //User's name
 
 /*Function that chooses computers name from the computer array defined in constants.h*/
@@ -54,6 +53,9 @@ std::string opponent() {
 	return value;
 }
 
+/*Global Variable*/
+std::string opponent_name = opponent(); //Variable placed here so that chosenPlayer() would work
+
 /*Function that chooses who begins the game - the user or the computer*/
 std::string chosenPlayer() {
 	srand(time(NULL));
@@ -62,13 +64,14 @@ std::string chosenPlayer() {
 		return x;
 	}
 	else {
-		return opponent();
+		return opponent_name;
 	}
 
 	return chosenPlayer();
 }
 
-std::string acornWon() {
+/*User's acorn won code*/
+std::string userAcornWon() {
 	srand(time(NULL));
 	int randomIndex = rand() % 5;
 
@@ -77,9 +80,23 @@ std::string acornWon() {
 	return acorn;
 }
 
-int main() {
- 	int y{}; //variable y declared but not defined - it will hold the user's random number choice to initiate their roll.
+/*Stores the won acorn as a variable to remember throughout the game*/
+std::string userAcornRound1 = userAcornWon();
 
+std::string opponentAcornWon() {
+	srand(time(NULL));
+	int randomIndex = rand() % 5;
+
+	std::string acorn = constants::coloredAcorns[randomIndex];
+
+	return acorn;
+}
+std::string opponentAcornRound1 = opponentAcornWon();
+
+int main() {
+	auto y{0}; //variable y declared and defined with auto since the user could enter anything - it will hold the user's random number choice to initiate their roll.
+	int a{}; //variable a declared and not defined. Will hold users position (do they go first in each round or after the opponent?) after random selection
+	
 	std::cout << "What is your name?\n";
 	std::cin >> x;
 
@@ -87,7 +104,6 @@ int main() {
 	
 	std::this_thread::sleep_for(std::chrono::milliseconds(4500));//Pause console for 4.5 seconds
 	
-	std::string opponent_name = opponent();
 	std::cout << "Your opponent is the computer " << opponent_name << " she is hard to beat.\n";
 	std::cout << "Good luck " << x << "!" << '\n';
 	
@@ -101,18 +117,61 @@ int main() {
 	{
 		std::cout << "Please enter a random number and press enter to see what acorn you will find.\n";
 		std::cin >> y;
-		std::cout << "Congratulations you found a " << acornWon() << " Acorn for your nest. That is one less acorn to find before winter sets in.\n";
+		std::cout << "Congratulations you found a " << userAcornWon() << " Acorn for your nest. That is one less acorn to find before winter sets in.\n";
+		a = 1;
 	}
 	else 
 	{
-		std::cout << "It looks like " << opponent_name << " found a " << acornWon() << " Acorn. It is time for you " << x << " to go look for an acorn.\n";
+		std::cout << "It looks like " << opponent_name << " found a " << opponentAcornWon() << " Acorn. It is time for you " << x << " to go look for an acorn.\n";
 		
 		std::this_thread::sleep_for(std::chrono::milliseconds(1500));//Pause console for 1.5 seconds
 		
 		std::cout << "Please enter a random number and press enter to see what acorn you will find.\n";
 		std::cin >> y;
-		std::cout << "Congratulations you found a " << acornWon() << " Acorn for your nest. That is one less acorn to find before winter sets in.\n";
+		std::cout << "Congratulations you found a " << userAcornWon() << " Acorn for your nest. That is one less acorn to find before winter sets in.\n";
+		a = 2;
 	}
 
+	/* Round 2 */
+	std::cout << opponent_name << " found a " << opponentAcornRound1 << " and " << x << " found a " << userAcornRound1 << '\n';
+
+	if (a == 1)
+	{
+		std::cout << "You went first in Round One. So you will go first in this round. Please enter a random number and press enter to see what acorn you will find.\n";
+		std::cin >> x;
+		std::cout << "You found a " << userAcornWon() << " Acorn.\n";
+		if (userAcornWon() == userAcornRound1) {
+			std::cout << "You already found this acorn. You can add it to your nest but you need to find all five colors to win\n";
+		}
+		else {
+			std::cout << "You have not found this acorn yet! That is one less acorn to find before winter sets in.\n";
+		}
+	}
+	else 
+	{
+		std::cout << "It looks like " << opponent_name << " found a " << opponentAcornWon() << " Acorn.\n"; 
+		if (opponentAcornWon() == opponentAcornRound1) {
+			std::cout << opponent_name << " has already found this acorn. She added it to her nest but it will not count towards a win.\n";
+		}
+		else {
+			std::cout << opponent_name << " has not found this acorn yet.\n";
+		}
+		
+		std::this_thread::sleep_for(std::chrono::milliseconds(1500));//Pause console for 1.5 seconds
+
+		std::cout << "It is time for " << x << " to go look for an acorn.\n";
+
+		std::cout << "Please enter a random number and press enter to see what acorn you will find.\n";
+		std::cin >> y;
+		std::cout << "You found a " << userAcornWon() << " Acorn.\n";
+		if (userAcornWon() == userAcornRound1) {
+			std::cout << "You already found this acorn. You can add it to your nest but you need to find all five colors to win\n";
+		}
+		else {
+			std::cout << "You have not found this acorn yet! That is one less acorn to find before winter sets in.\n";
+		}
+	}
+
+	/* Round 3 */
 	return 0;
 }

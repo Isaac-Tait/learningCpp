@@ -1,8 +1,6 @@
 ﻿  main.cpp
-C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\constants.h(14,26): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\constants.h(15,26): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\constants.h(17,26): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
 C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(48,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(58,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(71,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(61,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(75,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(87,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   sneakySnackySquirrel.vcxproj -> C:\Users\isaac\source\repos\sneakySnackySquirrel\Debug\sneakySnackySquirrel.exe

@@ -10,11 +10,6 @@ namespace constants {
 	std::string coloredAcorns[5] = { "Purple", "Blue", "Yellow", "Green", "Red" };
 
 	std::string gameName = "Sneaky Snacky Squirrel";
-
-	constexpr int selectOne = 1.0;
-	constexpr int selectTwo = 2.0;
-
-	constexpr int deleteAll = 0.0;
 }
 
 #endif // !CONSTANTS_H
