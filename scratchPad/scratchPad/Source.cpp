@@ -34,4 +34,15 @@ int main() {
 
 	double l{ (double)f / u }; //C-style cast done via the () operator
 	std::cout << "l is equal to: " << l << '\n';
+
+	//Commas can be used to separate statements. So 1,000,000 actually reads:
+	// 1;
+	// 000;
+	// 000;
+
+	long int one_million;
+	one_million = 1, 000, 000;
+
+	std::cout << "One Million " << one_million << '\n';
+	return 0;
 }
