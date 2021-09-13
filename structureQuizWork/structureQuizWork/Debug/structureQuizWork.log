@@ -1,0 +1,8 @@
+﻿  Source.cpp
+C:\Users\isaac\source\repos\structureQuizWork\structureQuizWork\Source.cpp(31,19): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\isaac\source\repos\structureQuizWork\structureQuizWork\Source.cpp(31,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\isaac\source\repos\structureQuizWork\structureQuizWork\Source.cpp(31,21): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\isaac\source\repos\structureQuizWork\structureQuizWork\Source.cpp(31,21): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\isaac\source\repos\structureQuizWork\structureQuizWork\Source.cpp(31,23): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\isaac\source\repos\structureQuizWork\structureQuizWork\Source.cpp(31,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  structureQuizWork.vcxproj -> C:\Users\isaac\source\repos\structureQuizWork\Debug\structureQuizWork.exe
