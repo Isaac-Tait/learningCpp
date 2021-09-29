@@ -132,7 +132,7 @@ int main() {
 		a = 2;
 	}
 
-	/* Round 2 */
+	/* Round 2 - write as a method */ 
 	std::cout << opponent_name << " found a " << opponentAcornRound1 << " and " << x << " found a " << userAcornRound1 << '\n';
 
 	if (a == 1)
