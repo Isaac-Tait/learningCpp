@@ -2,5 +2,5 @@
 C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(48,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(61,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(75,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(78,22): error C2065: 'coloredAcorns': undeclared identifier
 C:\Users\isaac\source\repos\sneakySnackySquirrel\sneakySnackySquirrel\main.cpp(87,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  sneakySnackySquirrel.vcxproj -> C:\Users\isaac\source\repos\sneakySnackySquirrel\Debug\sneakySnackySquirrel.exe

@@ -76,6 +76,7 @@ std::string userAcornWon() {
 	int randomIndex = rand() % 5;
 
 	std::string acorn = constants::coloredAcorns[randomIndex];
+	//int acorn = constants::Colored_Acorns[randomIndex]; //throws an error 
 
 	return acorn;
 }
