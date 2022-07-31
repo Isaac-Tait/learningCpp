@@ -1,0 +1,6 @@
+﻿  project1.5July22.cpp
+C:\Users\isaac\Desktop\C++\project1.5July22\project1.5July22\project1.5July22.cpp(16,7): error C2601: 'doNothing': local function definitions are illegal
+C:\Users\isaac\Desktop\C++\project1.5July22\project1.5July22\project1.5July22.cpp(7): message : this line contains a '{' which has not yet been matched
+C:\Users\isaac\Desktop\C++\project1.5July22\project1.5July22\project1.5July22.cpp(20,6): error C2601: 'main': local function definitions are illegal
+C:\Users\isaac\Desktop\C++\project1.5July22\project1.5July22\project1.5July22.cpp(7): message : this line contains a '{' which has not yet been matched
+C:\Users\isaac\Desktop\C++\project1.5July22\project1.5July22\project1.5July22.cpp(25,3): error C3861: 'doNothing': identifier not found
