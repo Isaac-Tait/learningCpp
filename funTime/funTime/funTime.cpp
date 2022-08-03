@@ -3,8 +3,40 @@
 
 #include <iostream>
 
+//Chapter 2 lesson 2
+
+int firstNumber() 
+{
+    std::cout << "Enter a number..." << "\n";
+
+    int numOne{ };
+
+    std::cin >> numOne;
+
+    return numOne;
+}
+
+int secondNumber() 
+{
+    std::cout << "Now enter another number..." << "\n";
+
+    int numTwo{ };
+
+    std::cin >> numTwo;
+
+    return numTwo;
+}
+
 int main()
 {
+    int mainNumberOne{ firstNumber() };
+
+    int mainNumberTwo{ secondNumber() };
+
+    std::cout << mainNumberOne << " + " << mainNumberTwo << " is equal to " << mainNumberOne + mainNumberTwo << "\n";
+
+    std::cout << mainNumberOne << " - " << mainNumberTwo << " is equal to " << mainNumberOne - mainNumberTwo << "\n";
+
     //Chapter 1 lesson 11
 /*
     std::cout << "Enter an integer. Than press enter.\n";
@@ -21,7 +53,7 @@ int main()
 */
 
     // Chapter 1 Quiz
-
+/*
     std::cout << "Enter a number..." << "\n";
 
     int numOne{ };
@@ -37,10 +69,7 @@ int main()
     std::cout << numOne << " + " << numTwo << " is equal to " << numOne + numTwo << "\n";
 
     std::cout << numOne << " - " << numTwo << " is equal to " << numOne - numTwo << "\n";
-
-
-
-    
+*/ 
 
     return 0;
 }
