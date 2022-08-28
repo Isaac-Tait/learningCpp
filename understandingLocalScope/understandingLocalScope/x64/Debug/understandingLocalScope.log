@@ -1,0 +1,3 @@
+﻿  understandingLocalScope.cpp
+C:\Users\isaac\Desktop\C++\understandingLocalScope\understandingLocalScope\understandingLocalScope.cpp(8,7): error C2082: redefinition of formal parameter 'x'
+C:\Users\isaac\Desktop\C++\understandingLocalScope\understandingLocalScope\understandingLocalScope.cpp(9,7): error C2082: redefinition of formal parameter 'y'
