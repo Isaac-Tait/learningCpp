@@ -5,8 +5,8 @@
 
 int add(int x, int y)
 {
-	int x{ 87 };
-	int y{ 999 };
+	/*int x{ 87 };
+	int y{ 999 };*/ //If I define x & y here they are considered formal parameters (a possibly deprecated naming) & redefining them on lines 17 & 18 throws a compile error
 
 	return x + y;
 }
